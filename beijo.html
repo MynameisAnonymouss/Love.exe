@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vale Beijo</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#111;
+    color:white;
+    font-family:'Special Elite', monospace;
+    overflow:hidden;
+    position:relative;
+}
+
+/* Fundo VHS */
+body::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:repeating-linear-gradient(
+        to bottom,
+        rgba(255,255,255,.05) 0px,
+        rgba(255,255,255,.05) 2px,
+        transparent 4px,
+        transparent 6px
+    );
+    animation:vhs .12s linear infinite;
+    pointer-events:none;
+}
+
+body::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:
+    radial-gradient(circle, transparent 60%, rgba(0,0,0,.65)),
+    linear-gradient(90deg,
+    rgba(255,0,0,.03),
+    transparent,
+    rgba(0,255,255,.03));
+    pointer-events:none;
+}
+
+@keyframes vhs{
+    from{transform:translateY(0);}
+    to{transform:translateY(6px);}
+}
+
+.texto{
+    text-align:center;
+    z-index:2;
+    animation:brilho 2s infinite alternate;
+}
+
+h1{
+    font-size:55px;
+    color:#ff5d9e;
+}
+
+p{
+    margin-top:20px;
+    font-size:26px;
+}
+
+@keyframes brilho{
+    from{
+        text-shadow:0 0 8px #ff5d9e;
+    }
+    to{
+        text-shadow:0 0 25px #00e5ff;
+    }
+}
+</style>
+
+</head>
+<body>
+
+<div class="texto">
+    <h1>Agora você me deve um beijo 🫦</h1>
+    <p>Validade até <strong>15/12/26</strong></p>
+</div>
+
+</body>
+</html>
